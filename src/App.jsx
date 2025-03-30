@@ -10,7 +10,8 @@ import Uploadmods from './Upload';
 
 //const socket = io('http://annie-mammoth.with.playit.plus');
 const API_URL = "http://annie-mammoth.with.playit.plus"; 
-const socket = io('http://localhost:3000');
+//const socket = io('http://localhost:3000');
+const socket = io(API_URL);
 
 function App() {
   const [logs, setLogs] = useState([]);
@@ -35,7 +36,7 @@ function App() {
   const handleServerAction = async (action) => {
     setLoading(true);
     try {
-      const res = await axios.post(`http://localhost:3000/${action}`);
+      const res = await axios.post(`${API_URL}/${action}`);
       console.log(res.data);
     } catch (err) {
       console.error(err.response ? err.response.data : err.message);

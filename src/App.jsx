@@ -35,7 +35,7 @@ function App() {
   const handleServerAction = async (action) => {
     setLoading(true);
     try {
-      const res = await axios.post(`${API_URL}${action}`);
+      const res = await axios.post(`http://localhost:3000${action}`);
       console.log(res.data);
     } catch (err) {
       console.error(err.response ? err.response.data : err.message);

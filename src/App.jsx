@@ -8,9 +8,9 @@ import { Link } from 'react-router-dom';
 import Uploadmods from './Upload';
 
 
-const socket = io('http://annie-mammoth.with.playit.plus');
+//const socket = io('http://annie-mammoth.with.playit.plus');
 const API_URL = "http://annie-mammoth.with.playit.plus"; 
-//const socket = io('http://localhost:3000');
+const socket = io('http://localhost:3000');
 
 function App() {
   const [logs, setLogs] = useState([]);
